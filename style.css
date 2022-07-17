@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hide-in {
+    animation: hideCalendarIn 600ms forwards ease-in;
+}
+
+.hide-out {
+    animation: hideCalendarOut 600ms forwards ease-out;
+}
+
+@keyframes hideCalendarIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hideCalendarOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#wrapper {
+    width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #FFF;
+}
+
+/* Calendar first side */
+
+#calendar-parent {
+    background-color: #FFFF;
+}
+
+#calendar-first-side {
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+#calendar-arrows_parent {
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
+
+#calendar-arrows_parent > div {
+    cursor: pointer;
+}
+
+/* Calendar Second Side */
+
+#calendar-second-side {
+    padding: 24px;
+    background-color: #FFF;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.day-item {
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    border: #ebebeb solid 0.7px;
+    text-align: center;
+    border-radius: 30px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin: 2px;
+    color: #1F1617;
+    cursor: pointer;
+}
+
+.active-day {
+    background-color: #0008C1;
+    color: #FFF;
+}
+
+/* Second side week days */
+
+#week-day_parent {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* background-color: #1F1617; */
+    color: #000;
+    font-weight: 600;
+    letter-spacing: .9px;
+}
+
+.week-day-item {
+    min-height: 200px;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around
+}
+
+.aditional-item {
+    color: #ebefeb;
+    font-weight: 900;
+    border-radius: 30px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin: 2px;
+    text-align: center;
+    height: auto;
+}
